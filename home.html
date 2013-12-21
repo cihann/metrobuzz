@@ -1,6 +1,39 @@
-<ul>
-    <li ng-repeat="(name, ratings) in stations">
-        {{ name }}
-        {{ station }}
-    </li>
-</ul>
+<form id="rate-form" ng-submit="rate()">
+    <p>
+        <label for="station">Bulunduğunuz Durak</label>
+        <select id="station" ng-model="station" ng-init="station = 'Söğütlüçeşme'">
+            <optgroup label="34A">
+            <option value="Söğütlüçeşme">Söğütlüçeşme</option>
+            <option value="Fikirtepe">Fikirtepe</option>
+            <option value="Uzunçayır">Uzunçayır</option>
+            <option value="Acıbadem">Acıbadem</option>
+            <option value="Altunizade">Altunizade</option>
+            <option value="Burhaniye">Burhaniye</option>
+            <option value="Boğaziçi Köprüsü">Boğaziçi Köprüsü</option>
+            <option value="Zincirlikuyu">Zincirlikuyu</option>
+            <option value="Mecidiyeköy">Mecidiyeköy</option>
+            <option value="Çağlayan">Çağlayan</option>
+            <option value="Okmeydanı Hastane">Okmeydanı Hastane</option>
+            <option value="Darülaceze">Darülaceze</option>
+            <option value="Okmeydanı">Okmeydanı</option>
+            <option value="Halıcıoğlu">Halıcıoğlu</option>
+            <option value="Ayvansaray">Ayvansaray</option>
+            <option value="Edirnekapı">Edirnekapı</option>
+            <option value="Maltepe">Maltepe</option>
+            <option value="Bayrampaşa">Bayrampaşa</option>
+            <option value="Topkapı">Topkapı</option>
+            <option value="Cevizlibağ">Cevizlibağ</option>
+            </optgroup>
+        </select>
+    </p>
+    <p>
+        <label>Yoğunluk</label>
+        <ul id="congestion-level">
+            <li><a class="level-1" href ng-click="rate(1)">1</a></li>
+            <li><a class="level-2" href ng-click="rate(2)">2</a></li>
+            <li><a class="level-3" href ng-click="rate(3)">3</a></li>
+            <li><a class="level-4" href ng-click="rate(4)">4</a></li>
+            <li><a class="level-5" href ng-click="rate(5)">5</a></li>
+        </ul>
+    </p>
+</form>

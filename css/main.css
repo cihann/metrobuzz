@@ -96,22 +96,73 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+    background-color: #454545;
+}
 
+#container {
+    width: 600px;
+    margin: auto;
+    font-size: 18px;
+}
 
+form label {
+    display: block;
+    color: #535353;
+}
 
+form p {
+}
 
+#rate-form {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    border: 20px solid #323232;
+    border-radius: 60px;
+    padding-left: 40px;
+}
 
+#rate-form option {
+    font-size: 23px;
+}
 
+#congestion-level {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
 
+#congestion-level li {
+    list-style: none;
+    float: left;
+    width: 50px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    text-indent: -9999px;
+}
 
+#congestion-level li a {
+    background-color: gray;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform 0.05s ease-in;
+    position: relative;
+}
 
+#congestion-level li a.level-1 { background-color: #ff6054; }
+#congestion-level li a.level-2 { background-color: #eca09f; }
+#congestion-level li a.level-3 { background-color: #f3ee68; }
+#congestion-level li a.level-4 { background-color: #b0ec7d; }
+#congestion-level li a.level-5 { background-color: #80c534; }
 
-
-
-
-
-
-
+#congestion-level li a:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    z-index:999
+}
 
 /* ==========================================================================
    Helper classes
