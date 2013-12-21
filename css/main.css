@@ -164,6 +164,15 @@ form p {
     z-index:999
 }
 
+.current-congestion {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #7cc532;
+    border-radius: 50%;
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
