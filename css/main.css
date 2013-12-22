@@ -200,9 +200,9 @@ h1 strong {
 .current-congestion.level-0:after {content: "";}
 .current-congestion.level-1:after {content: "Dedeler";}
 .current-congestion.level-2:after {content: "Yoğun";}
-.current-congestion.level-3:after {content: "Orta";}
-.current-congestion.level-4:after {content: "Oturulabilir";}
-.current-congestion.level-5:after {content: "Vatan Şaşmaz";}
+.current-congestion.level-3:after {content: "Oturulabilir";}
+.current-congestion.level-4:after {content: "Vatan Şaşmaz";}
+.current-congestion.level-5:after {content: "Mükemmel";}
 
 
 /* ==========================================================================
