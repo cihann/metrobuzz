@@ -143,7 +143,6 @@ form p {
 }
 
 #congestion-level li a {
-    background-color: gray;
     display: block;
     width: 50px;
     height: 50px;
@@ -151,12 +150,6 @@ form p {
     -webkit-transition: -webkit-transform 0.05s ease-in;
     position: relative;
 }
-
-#congestion-level li a.level-1 { background-color: #ff6054; }
-#congestion-level li a.level-2 { background-color: #eca09f; }
-#congestion-level li a.level-3 { background-color: #f3ee68; }
-#congestion-level li a.level-4 { background-color: #b0ec7d; }
-#congestion-level li a.level-5 { background-color: #80c534; }
 
 #congestion-level li a:hover {
     transform: scale(1.2);
@@ -168,7 +161,6 @@ form p {
     display: block;
     width: 40px;
     height: 40px;
-    background-color: #7cc532;
     border-radius: 50%;
 }
 
@@ -187,6 +179,27 @@ h1 strong {
 .back {
     color: gray;
 }
+
+.level-0 { background-color: #bebebe; }
+.level-1 { background-color: #ff6054; }
+.level-2 { background-color: #eca09f; }
+.level-3 { background-color: #f3ee68; }
+.level-4 { background-color: #b0ec7d; }
+.level-5 { background-color: #80c534; }
+
+.current-congestion:after {
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 47px;
+    color: gray;
+}
+.current-congestion.level-0:after {content: "";}
+.current-congestion.level-1:after {content: "Dedeler";}
+.current-congestion.level-2:after {content: "Yoğun";}
+.current-congestion.level-3:after {content: "Orta";}
+.current-congestion.level-4:after {content: "Oturulabilir";}
+.current-congestion.level-5:after {content: "Vatan şaşmaz";}
+
 
 /* ==========================================================================
    Helper classes
