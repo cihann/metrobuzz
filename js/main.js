@@ -32,11 +32,15 @@ angular.module('metrobuzz', ['ngRoute', 'firebase'])
                 for (var rating in station) {
                     sum += station[rating];
                 }
+
+                var average;
                 if (!sum) {
-                  $scope.current_congestion = 0;
+                   average = 0;
                 } else {
-                  $scope.current_congestion = Math.round(sum / rating_count);
+                   average = Math.ceil(sum / rating_count);
                 }
+
+                $scope.current_congestion = average;
             });
         });
     });
