@@ -101,7 +101,7 @@ body {
 }
 
 #container {
-    width: 600px;
+    width: 100%;
     margin: auto;
     font-size: 18px;
 }
@@ -118,8 +118,7 @@ form p {
     margin-top: 10px;
     padding: 20px;
     background-color: white;
-    border: 20px solid #323232;
-    border-radius: 60px;
+
     padding-left: 40px;
 }
 
@@ -131,6 +130,7 @@ form p {
     margin: 0;
     padding: 0;
     height: 50px;
+    width: 300px;
 }
 
 #congestion-level li {
@@ -192,13 +192,14 @@ h1 strong {
     margin-top: 7px;
     margin-left: 47px;
     color: gray;
+    width: 200px;
 }
 .current-congestion.level-0:after {content: "";}
 .current-congestion.level-1:after {content: "Dedeler";}
 .current-congestion.level-2:after {content: "Yoğun";}
 .current-congestion.level-3:after {content: "Orta";}
 .current-congestion.level-4:after {content: "Oturulabilir";}
-.current-congestion.level-5:after {content: "Vatan şaşmaz";}
+.current-congestion.level-5:after {content: "Vatan Şaşmaz";}
 
 
 /* ==========================================================================
@@ -310,6 +311,15 @@ h1 strong {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+    body {
+	    width: 600px;
+        margin: auto;
+    }
+
+    #rate-form {
+        border: 20px solid #323232;
+        border-radius: 60px;
+    }
 }
 
 @media print,
