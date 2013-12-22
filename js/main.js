@@ -19,7 +19,24 @@ angular.module('metrobuzz', ['ngRoute', 'firebase'])
 
     .controller('HomeController', function ($scope, Stations) {
         $scope.stations = Stations;
+        $scope.current_congestion = 0;
         $scope.rate = function (rating) {
             $scope.stations.$child($scope.station).$add(rating);
+            $scope.submitted = true;
         };
+        $scope.stations.$on('loaded', function (response) {
+            $scope.$watch('station', function () {
+                var station = response[$scope.station] || {},
+                    sum = 0,
+                    rating_count = Object.keys(station).length;
+                for (var rating in station) {
+                    sum += station[rating];
+                }
+                if (!sum) {
+                  $scope.current_congestion = 0;
+                } else {
+                  $scope.current_congestion = Math.round(sum / rating_count);
+                }
+            });
+        });
     });

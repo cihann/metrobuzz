@@ -115,7 +115,7 @@ form p {
 }
 
 #rate-form {
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 20px;
     background-color: white;
     border: 20px solid #323232;
@@ -170,7 +170,22 @@ form p {
     height: 40px;
     background-color: #7cc532;
     border-radius: 50%;
+}
 
+h1 {
+    text-align: center;
+    margin: 60px 0 0 0;
+    padding: 0;
+    color: #e7e7e7;
+    font-size: 50px;
+}
+
+h1 strong {
+    color: #878787;
+}
+
+.back {
+    color: gray;
 }
 
 /* ==========================================================================

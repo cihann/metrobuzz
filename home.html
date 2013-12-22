@@ -1,7 +1,19 @@
 <form id="rate-form" ng-submit="rate()">
-    <p>
+    <div id="success" ng-show="submitted">
+        <h3>{{ station }}</h3>
+        <p><label>Şu anki yoğunluk</label></p>
+        <p>
+            <span class="current-congestion" ng-class="level-{{ current_congestion }}"></span>
+        </p>
+        <p>Oy verdiğiniz için teşekkürler.</p>
+        <p>
+            <a href ng-click="submitted = false" class="back">Geri dön</a>
+        </p>
+    </div>
+    <div ng-hide="submitted">
+        <p>
         <label for="station">Bulunduğunuz Durak</label>
-        <select id="station" ng-model="station" ng-init="station = 'Söğütlüçeşme'">
+        <select id="station" ng-model="station" ng-init="station = 'Zincirlikuyu'">
             <optgroup label="34A">
             <option value="Söğütlüçeşme">Söğütlüçeşme</option>
             <option value="Fikirtepe">Fikirtepe</option>
@@ -29,7 +41,9 @@
     <p>
         <label>Şu anki yoğunluk</label>
     </p>
-    <p><span class="current-congestion" class="level-3"></span></p>
+    <p>
+        <span class="current-congestion" ng-class="level-{{ current_congestion }}"></span>
+    </p>
     <p>
         <label>Siz de Yoğunluk belirtin</label>
         <ul id="congestion-level">
@@ -40,4 +54,6 @@
             <li><a class="level-5" href ng-click="rate(5)">5</a></li>
         </ul>
     </p>
+    </div>
+    {{ current_congestion }}
 </form>
